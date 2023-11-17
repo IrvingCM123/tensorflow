@@ -26,6 +26,9 @@ jobs:
       - name: Download and run the Docker base image
         run: docker run -d --name serving_base tensorflow/serving
 
+      - name: Revisa los contenedores descargados 
+        run: docker ps -a
+
       - name: Debug check container directory
         run: docker exec serving_base ls -l /models/
 
